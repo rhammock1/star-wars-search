@@ -1,4 +1,5 @@
 import React from 'react';
+import './Search.css';
 
 const Search = function(props) {
     return (
@@ -7,7 +8,7 @@ const Search = function(props) {
         <fieldset>
           <legend>Search by name</legend>
           <label htmlFor='search-bar'>Search: </label>
-          <input type='text' id='search-bar' onChange={event => props.handleSearchChange(event)}/>
+          <input type='text' id='search-bar' onChange={event => props.handleSearchChange(event)} placeholder='Skywalker'/>
           <button type='submit' onClick={event => props.handleSubmitClick(event)}>Search!</button>
         </fieldset>
       </form>

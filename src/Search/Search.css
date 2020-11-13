@@ -1,0 +1,11 @@
+.search-container {
+  width:90%;
+  font-family: 'Open Sans', sans-serif;
+}
+.search-form {
+  width:auto;
+}
+button {
+  margin-left: 10px;
+  border-radius: 5px;
+}

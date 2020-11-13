@@ -36,6 +36,7 @@ class App extends React.Component {
     .then(res => res.ok ? res.json() : error => Promise.reject(error))
     .then(results => {
       console.log(results)
+      this.setState({results:results.results})
       this.setState({loading:false})
     })
     .catch(error => this.setState({error:error, loading: false}))

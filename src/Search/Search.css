@@ -3,9 +3,16 @@
   font-family: 'Open Sans', sans-serif;
 }
 .search-form {
-  width:auto;
+  width:75%;
+  background-color:black;
+  margin-left:10px;
 }
 button {
   margin-left: 10px;
   border-radius: 5px;
+}
+fieldset {
+  text-align: center;
+  
+  border-color:black;
 }

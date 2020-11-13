@@ -1,9 +1,13 @@
 .result-container {
   width:auto;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius:5px;
-  box-shadow: 3px 5px grey;
+  
   margin:10px;
   font-family: 'Poller One', cursive;
+  background: linear-gradient(-45deg, black, purple);
   
+}
+h3 {
+  padding-left:10px;
 }

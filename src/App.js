@@ -4,6 +4,7 @@ import Loading from './Loading/Loading';
 import Search from './Search/Search';
 import Header from './Header/Header';
 import Error from './Error/Error'
+import ResultList from './ResultList/ResultList';
 
 class App extends React.Component {
   state ={
@@ -12,6 +13,7 @@ class App extends React.Component {
     },
     loading: false,
     error:null,
+    results: [],
   }
   handleClearError = () => {
     console.log('clear clicked');
@@ -63,6 +65,7 @@ class App extends React.Component {
           handleSearchChange={this.handleSearchChange}
           handleSubmitClick={this.handleSubmitClick}
         />
+        <ResultList results={this.state.results} />
       </>
     )
   }

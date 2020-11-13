@@ -3,6 +3,7 @@ import './App.css';
 import Loading from './Loading/Loading';
 import Search from './Search/Search';
 import Header from './Header/Header';
+import Error from './Error/Error'
 
 class App extends React.Component {
   state ={
@@ -12,6 +13,10 @@ class App extends React.Component {
     loading: false,
     error:null,
   }
+  handleClearError = () => {
+    console.log('clear clicked');
+    this.setState({error:null});
+  }
 
   handleSearchChange = (event) => {
     this.setState({searchTerm: {value: event.target.value}})
@@ -19,11 +24,11 @@ class App extends React.Component {
   handleSubmitClick = (event) => {
     event.preventDefault();
     this.setState({loading: true});
-    const baseURL = 'https://swapi.co/api/people/?search='
+    const baseURL = 'https://swapi-thinkful.herokuapp.com/api/people/?search='
     fetch(`${baseURL}${this.state.searchTerm.value}`, {
       method: 'GET',
       header: {
-        'content-type': 
+        'content-type': 'application/json'
       }
     })
     .then(res => res.ok ? res.json() : error => Promise.reject(error))
@@ -43,11 +48,22 @@ class App extends React.Component {
         </>
       )
     }
+    if(this.state.error) {
+      return(
+        <>
+          <Header />
+          <Error error={this.state.error} onClearError={() => this.handleClearError()}/>
+        </>
+      )
+    }
     return (
-      <Search 
-        handleSearchChange={this.handleSearchChange}
-        handleSubmitClick={this.handleSubmitClick}
+      <>
+        <Header />
+        <Search 
+          handleSearchChange={this.handleSearchChange}
+          handleSubmitClick={this.handleSubmitClick}
         />
+      </>
     )
   }
 }

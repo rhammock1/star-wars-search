@@ -1,4 +1,4 @@
-Simple React app using a star wars api to search for characters by their name
+Simple React app using a star wars api to search for characters by their name <br />
 Production build can be found @ 'https://star-wars-search-rose.vercel.app/'
 
 # Getting Started with Create React App

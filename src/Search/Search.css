@@ -1,6 +1,9 @@
 .search-container {
   width:90%;
+  margin:0;
   font-family: 'Open Sans', sans-serif;
+  display:flex;
+  justify-content:center;
 }
 .search-form {
   width:75%;

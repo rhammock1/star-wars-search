@@ -2,5 +2,15 @@ body {
   margin:0;
   padding:0;
   color:gold;
-  background-image: url('https://garden.spoonflower.com/c/8151605/i/xs/nyXidr-1WNqjVAwQLUfSiUkpdVwa1wR4Z5U/8151605.jpg')
+  background-image: url('https://garden.spoonflower.com/c/8151605/i/xs/nyXidr-1WNqjVAwQLUfSiUkpdVwa1wR4Z5U/8151605.jpg');
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#root {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
